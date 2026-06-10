@@ -10,17 +10,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <a href="featured.html" class="nav-link">Featured</a>
+        <a href="index.html" class="nav-link active">All Playlists</a>
+    </nav>
+
     <header>
-        <!-- Your header content here -->
+        <h1>Music Playlist Explorer</h1>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <main>
+        <div class="playlist-cards">
+            <!-- Cards will be dynamically created by JavaScript -->
+        </div>
     </main>
 
     <footer>
         <!-- Your footer content here -->
     </footer>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" hidden>
+        <div class="modal">
+            <div class="modal-content">
+                <!-- Close button -->
+                <button class="close-btn" id="closeBtn">&times;</button>
+
+                <!-- Playlist header with image and info -->
+                <div class="modal-header">
+                    <img class="modal-cover" id="modalCover" src="https://via.placeholder.com/200x200" alt="Playlist cover">
+                    <div class="modal-info">
+                        <h2 class="modal-title" id="modalTitle">Playlist Title</h2>
+                        <p class="modal-author" id="modalAuthor">Creator Name</p>
+                        <div class="modal-likes">
+                            <span class="heart-icon">♡</span>
+                            <span id="modalLikeCount">5</span>
+                        </div>
+                        <button class="shuffle-btn" id="shuffleBtn">Shuffle</button>
+                    </div>
+                </div>
+
+                <!-- Song list -->
+                <ul class="song-list" id="songList">
+                    <li class="song-item">
+                        <img class="song-thumbnail" src="https://via.placeholder.com/60x60" alt="Album art">
+                        <div class="song-info">
+                            <div class="song-title">Song Title</div>
+                            <div class="song-artist">Artist Name</div>
+                        </div>
+                        <span class="song-duration">0:00</span>
+                    </li>
+                    <li class="song-item">
+                        <img class="song-thumbnail" src="https://via.placeholder.com/60x60" alt="Album art">
+                        <div class="song-info">
+                            <div class="song-title">Song Title</div>
+                            <div class="song-artist">Artist Name</div>
+                        </div>
+                        <span class="song-duration">0:00</span>
+                    </li>
+                    <li class="song-item">
+                        <img class="song-thumbnail" src="https://via.placeholder.com/60x60" alt="Album art">
+                        <div class="song-info">
+                            <div class="song-title">Song Title</div>
+                            <div class="song-artist">Artist Name</div>
+                        </div>
+                        <span class="song-duration">0:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="data/data.js"></script>
     <script src="script.js"></script>
 </body>

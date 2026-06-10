@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Playlist - Music Playlist Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="featured-page">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <a href="featured.html" class="nav-link active">Featured</a>
+        <a href="index.html" class="nav-link">All Playlists</a>
+    </nav>
+
+    <!-- Featured Content -->
+    <main class="featured-main">
+        <div class="featured-container">
+            <h1 class="featured-heading">Featured Playlist</h1>
+
+            <!-- Large Album Cover -->
+            <div class="featured-image-container">
+                <img id="featuredCover" class="featured-cover" src="" alt="Featured playlist cover">
+            </div>
+
+            <!-- Playlist Info -->
+            <div class="featured-info">
+                <h2 id="featuredName" class="featured-title">Loading...</h2>
+                <p id="featuredAuthor" class="featured-author">by Author</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="featured-actions">
+                <button id="featuredLikeBtn" class="action-btn like-btn">
+                    <span class="heart-icon">♡</span>
+                    <span id="featuredLikeCount">0</span>
+                </button>
+                <button id="featuredShuffleBtn" class="action-btn shuffle-btn">
+                    🔀 Shuffle
+                </button>
+                <button id="newFeaturedBtn" class="action-btn refresh-btn">
+                    🔄 New Featured
+                </button>
+            </div>
+
+            <!-- Song List -->
+            <div class="featured-songs-section">
+                <h3 class="songs-heading">Songs</h3>
+                <ul id="featuredSongList" class="featured-song-list">
+                    <!-- Songs will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../data/data.json" type="application/json"></script>
+    <script src="featured-script.js"></script>
+</body>
+</html>

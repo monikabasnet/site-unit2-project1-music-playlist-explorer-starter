@@ -1,0 +1,171 @@
+[
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Summer Vibes",
+    "author": "DJ Sunshine",
+    "likeCount": 128,
+    "songs": [
+      {
+        "title": "Beach Dreams",
+        "artist": "Coastal Band",
+        "duration": "3:42"
+      },
+      {
+        "title": "Sunset Glow",
+        "artist": "Wave Riders",
+        "duration": "4:15"
+      },
+      {
+        "title": "Ocean Breeze",
+        "artist": "Tropical Beats",
+        "duration": "3:28"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Workout Mix",
+    "author": "Fitness Guru",
+    "likeCount": 256,
+    "songs": [
+      {
+        "title": "Power Up",
+        "artist": "Energy Squad",
+        "duration": "2:58"
+      },
+      {
+        "title": "Keep Moving",
+        "artist": "Motivation Crew",
+        "duration": "3:31"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Late Night Study",
+    "author": "Lo-Fi Master",
+    "likeCount": 512,
+    "songs": [
+      {
+        "title": "Midnight Focus",
+        "artist": "Study Beats",
+        "duration": "5:12"
+      },
+      {
+        "title": "Rainy Window",
+        "artist": "Chill Hop Cafe",
+        "duration": "4:47"
+      },
+      {
+        "title": "Coffee Shop Jazz",
+        "artist": "Relaxing Vibes",
+        "duration": "3:55"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Road Trip Hits",
+    "author": "Highway Heroes",
+    "likeCount": 342,
+    "songs": [
+      {
+        "title": "Open Road",
+        "artist": "The Travelers",
+        "duration": "4:22"
+      },
+      {
+        "title": "Miles Away",
+        "artist": "Journey Band",
+        "duration": "3:58"
+      },
+      {
+        "title": "Highway Stars",
+        "artist": "Road Warriors",
+        "duration": "4:05"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Indie Favorites",
+    "author": "Music Curator",
+    "likeCount": 189,
+    "songs": [
+      {
+        "title": "Golden Hour",
+        "artist": "The Sunsets",
+        "duration": "3:15"
+      },
+      {
+        "title": "Paper Planes",
+        "artist": "Dream Folk",
+        "duration": "4:30"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Chill Acoustic",
+    "author": "Acoustic Vibes",
+    "likeCount": 421,
+    "songs": [
+      {
+        "title": "Campfire Stories",
+        "artist": "Guitar Heroes",
+        "duration": "3:48"
+      },
+      {
+        "title": "Whisper Wind",
+        "artist": "String Theory",
+        "duration": "4:12"
+      },
+      {
+        "title": "Morning Coffee",
+        "artist": "Unplugged Collective",
+        "duration": "3:33"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Party Anthems",
+    "author": "DJ Hype",
+    "likeCount": 678,
+    "songs": [
+      {
+        "title": "Dance All Night",
+        "artist": "Electric Crew",
+        "duration": "3:25"
+      },
+      {
+        "title": "Bass Drop",
+        "artist": "Club Masters",
+        "duration": "4:10"
+      },
+      {
+        "title": "Neon Lights",
+        "artist": "Party People",
+        "duration": "3:52"
+      }
+    ]
+  },
+  {
+    "coverImage": "assets/img/playlist.png",
+    "name": "Nature Sounds",
+    "author": "Peaceful Mind",
+    "likeCount": 234,
+    "songs": [
+      {
+        "title": "Forest Rain",
+        "artist": "Nature Collective",
+        "duration": "6:15"
+      },
+      {
+        "title": "Ocean Waves",
+        "artist": "Calm Waters",
+        "duration": "5:40"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+# API Keys and Secrets
+secret.js
+
+# Environment variables
+.env
+
+# OS Files
+.DS_Store
+
+# Editor files
+.vscode/
