@@ -152,20 +152,24 @@ Estimated time spent: **10** hours spent in total
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Yes, AI API helped a lot. Also API was hard to implement.
+Ans:Yes, AI API helped a lot. Also API was hard to implement.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-Work on search feature
+
+Ans: Work on search feature
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-It went well, I would like to add actual songs as my peers.
+Ans:It went well, I would like to add actual songs as my peers.
 
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
 
+Ans: NA
+
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
-Ardelia, Devarsh, Greg, Paulo
+
+Ans: Ardelia, Devarsh, Greg, Paulo
