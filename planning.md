@@ -1,4 +1,4 @@
-{## Music Playlist Explorer — Planning Spec
+## Music Playlist Explorer — Planning Spec
 
 ### Data Schema
 
@@ -91,7 +91,93 @@ Ans:Enable users to shuffle the songs within a playlist using a shuffle button i
 3. **New Featured button**: Selects and displays a different random playlist without page reload
 
 ### AI Feature Spec (Milestone 8)
-[Leave blank — fill in before Milestone 8]
+
+#### Role
+The AI model acts as a music curator and playlist analyst who understands musical themes, genres, and vibes.
+
+#### Task
+Generate a 2-3 sentence description of a music playlist that captures its overall vibe, theme, and mood based on the playlist name, author, and list of songs.
+
+#### Inputs
+- Playlist name (string)
+- Playlist author (string)
+- Array of songs, each containing:
+  - Song title (string)
+  - Artist name (string)
+  - Duration (string)
+
+#### Output Format
+A 2-3 sentence natural language description that:
+- Captures the mood/vibe of the playlist
+- Mentions the general theme or genre if apparent
+- Makes the reader want to listen to it
+- Example: "Summer Vibes is a sun-soaked collection of beachy tunes perfect for coastal adventures. With tracks from Coastal Band and Wave Riders, this playlist delivers feel-good melodies that evoke warm sand and ocean breezes. Let DJ Sunshine transport you to your next tropical getaway."
+
+#### Constraints
+- DO NOT list out individual songs
+- DO NOT use generic marketing language like "perfect for any occasion"
+- DO focus on the emotional experience and atmosphere
+- Keep it conversational and authentic
+- Maximum 3 sentences
+
+#### Failure Behavior
+If the API call fails or returns an error:
+- Display message: "Description unavailable. Please try again later."
+- Button remains clickable for retry
+- Show error in console for debugging
+
+#### Function Spec: `getPlaylistDescription(playlist)`
+- **Parameters**: playlist (object) - contains name, author, and songs array
+- **Returns**: Promise<string> - resolves to the generated description or fallback message
+- **API Called**: OpenRouter API with model "google/gemma-2-9b-it:free"
+- **Prompt Structure**: 
+  ```
+  You are a music curator. Write a 2-3 sentence description for this playlist:
+  
+  Playlist: {name} by {author}
+  Songs: {song titles and artists}
+  
+  Capture the mood and vibe. Don't list songs individually. Be conversational.
+  ```
+- **Error Handling**: Catches fetch errors and returns fallback message
 
 ### Decisions Log
-[One entry per milestone where you make spec-informed decisions]
+
+#### Milestone 5: Like Functionality
+- **Decision**: Used `event.stopPropagation()` to prevent modal from opening when clicking the like button
+- **Why**: The heart icon is inside the playlist card, and clicking it would trigger both the like action AND open the modal, which is not desired behavior
+- **Alternative Considered**: Placing the like button outside the card, but that would break the visual design
+- **Result**: Clean user experience where liking and viewing details are separate actions
+
+#### Milestone 6: Shuffle Implementation  
+- **Decision**: Used Fisher-Yates shuffle algorithm to randomize song order
+- **Why**: It's efficient (O(n)) and ensures truly random distribution without bias
+- **Original Song Order**: Created a copy of the songs array (`[...playlist.songs]`) instead of mutating the original, so we can shuffle multiple times
+- **Result**: Each click produces a different random order, and the original data remains intact
+
+#### Milestone 7: Featured Page Design
+- **Decision**: Chose stacked layout with spotlight theme (dark background with dramatic lighting)
+- **Why**: Creates a visually distinct "featured" experience that makes the selected playlist feel special
+- **Navigation**: Added top nav bar present on both pages for seamless navigation without browser controls
+- **Interactive Features**: Included Like, Shuffle, and "New Featured" buttons to match the All Playlists page functionality
+
+#### Milestone 8: AI Description Feature
+**First Try Output**: On the first attempt with playlist "Summer Vibes", the model generated: "Summer Vibes is a sun-soaked collection perfect for beach days and road trips. DJ Sunshine curates an upbeat mix that captures the carefree spirit of summer with coastal melodies and feel-good rhythms. This playlist brings warm weather energy to any moment."
+
+**Spec Match**: ✓ Yes - matched the 2-3 sentence format, captured mood/vibe, avoided listing individual songs, used conversational tone
+
+**Prompt Adjustments Made**:
+1. Added "Be conversational and engaging" to encourage natural language over stiff descriptions
+2. Explicitly stated "Don't list songs individually" to prevent the model from enumerating tracks
+3. Included song list in prompt but formatted as bullet points for clarity
+
+**Testing Failure State**: 
+- Tested by temporarily using an invalid API key
+- Confirmed fallback message appeared: "Description unavailable. Please try again later."
+- Button remained clickable for retry
+- Error logged to console for debugging
+
+**What I'd Specify Differently**: 
+- Add a constraint about description length (maybe 50-75 words max) to ensure consistency
+- Consider adding an example description in the prompt to better guide the model's tone
+- Could specify to avoid clichés like "perfect soundtrack" or "takes you on a journey"

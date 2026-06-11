@@ -1,6 +1,6 @@
 [
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1593558628703-535b2556320b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN1bW1lcnxlbnwwfHwwfHx8MA%3D%3D",
     "name": "Summer Vibes",
     "author": "DJ Sunshine",
     "likeCount": 128,
@@ -23,10 +23,10 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop",
     "name": "Workout Mix",
     "author": "Fitness Guru",
-    "likeCount": 256,
+    "likeCount": 0,
     "songs": [
       {
         "title": "Power Up",
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1761208158948-e35d1047576c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhdGUlMjBuaWdodCUyMHN0dWR5JTIwZ2hpYmxpfGVufDB8fDB8fHww",
     "name": "Late Night Study",
     "author": "Lo-Fi Master",
     "likeCount": 512,
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=400&fit=crop",
     "name": "Road Trip Hits",
     "author": "Highway Heroes",
     "likeCount": 342,
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=400&fit=crop",
     "name": "Indie Favorites",
     "author": "Music Curator",
     "likeCount": 189,
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=400&fit=crop",
     "name": "Chill Acoustic",
     "author": "Acoustic Vibes",
     "likeCount": 421,
@@ -128,7 +128,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop",
     "name": "Party Anthems",
     "author": "DJ Hype",
     "likeCount": 678,
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "coverImage": "assets/img/playlist.png",
+    "coverImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop",
     "name": "Nature Sounds",
     "author": "Peaceful Mind",
     "likeCount": 234,

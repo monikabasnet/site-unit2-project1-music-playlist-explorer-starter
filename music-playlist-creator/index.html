@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <a href="featured.html" class="nav-link">Featured</a>
-        <a href="index.html" class="nav-link active">All Playlists</a>
-    </nav>
-
-    <header>
+    <!-- Header with Navigation -->
+    <header class="header-nav">
         <h1>Music Playlist Explorer</h1>
+        <nav class="nav-bar">
+            <a href="featured.html" class="nav-link">Featured</a>
+            <a href="index.html" class="nav-link active">All Playlists</a>
+            <button class="add-playlist-btn" id="addPlaylistBtn">+ Add New Playlist</button>
+        </nav>
     </header>
 
     <main>
@@ -29,6 +29,91 @@
     <footer>
         <!-- Your footer content here -->
     </footer>
+
+    <!-- Edit Playlist Form Modal -->
+    <div class="modal-overlay" id="editPlaylistModal" hidden>
+        <div class="modal form-modal">
+            <button class="close-btn" id="closeEditFormBtn">&times;</button>
+            <h2>Edit Playlist</h2>
+
+            <form id="editPlaylistForm">
+                <div class="form-group">
+                    <label for="editPlaylistName">Playlist Name:</label>
+                    <input type="text" id="editPlaylistName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editPlaylistAuthor">Author/Creator:</label>
+                    <input type="text" id="editPlaylistAuthor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editPlaylistCover">Cover Image URL:</label>
+                    <input type="url" id="editPlaylistCover" required>
+                </div>
+
+                <h3>Songs</h3>
+                <div id="editSongsContainer">
+                    <!-- Songs will be dynamically added here -->
+                </div>
+
+                <button type="button" class="add-song-btn" id="addEditSongBtn">+ Add Another Song</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Save Changes</button>
+                    <button type="button" class="cancel-btn" id="cancelEditFormBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Playlist Form Modal -->
+    <div class="modal-overlay" id="addPlaylistModal" hidden>
+        <div class="modal form-modal">
+            <button class="close-btn" id="closeFormBtn">&times;</button>
+            <h2>Add New Playlist</h2>
+
+            <form id="addPlaylistForm">
+                <div class="form-group">
+                    <label for="playlistName">Playlist Name:</label>
+                    <input type="text" id="playlistName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlistAuthor">Author/Creator:</label>
+                    <input type="text" id="playlistAuthor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlistCover">Cover Image URL:</label>
+                    <input type="url" id="playlistCover" placeholder="https://example.com/image.jpg" required>
+                </div>
+
+                <h3>Add Songs (at least 2)</h3>
+                <div id="songsContainer">
+                    <div class="song-form-group">
+                        <h4>Song 1</h4>
+                        <input type="text" class="song-title-input" placeholder="Song Title" required>
+                        <input type="text" class="song-artist-input" placeholder="Artist Name" required>
+                        <input type="text" class="song-duration-input" placeholder="Duration (e.g., 3:45)" required>
+                    </div>
+                    <div class="song-form-group">
+                        <h4>Song 2</h4>
+                        <input type="text" class="song-title-input" placeholder="Song Title" required>
+                        <input type="text" class="song-artist-input" placeholder="Artist Name" required>
+                        <input type="text" class="song-duration-input" placeholder="Duration (e.g., 3:45)" required>
+                    </div>
+                </div>
+
+                <button type="button" class="add-song-btn" id="addSongBtn">+ Add Another Song</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Create Playlist</button>
+                    <button type="button" class="cancel-btn" id="cancelFormBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay" hidden>
@@ -44,11 +129,20 @@
                         <h2 class="modal-title" id="modalTitle">Playlist Title</h2>
                         <p class="modal-author" id="modalAuthor">Creator Name</p>
                         <div class="modal-likes">
-                            <span class="heart-icon">♡</span>
-                            <span id="modalLikeCount">5</span>
+                            <button class="modal-like-btn" id="modalLikeBtn">
+                                <span class="heart-icon" id="modalHeartIcon">♡</span>
+                                <span id="modalLikeCount">5</span>
+                            </button>
                         </div>
                         <button class="shuffle-btn" id="shuffleBtn">Shuffle</button>
+                        <button class="description-btn" id="descriptionBtn">Get Description</button>
                     </div>
+                </div>
+
+                <!-- AI Description Section -->
+                <div class="ai-description" id="aiDescription" style="display: none;">
+                    <h3>AI-Generated Description</h3>
+                    <p id="descriptionText"></p>
                 </div>
 
                 <!-- Song list -->
@@ -82,7 +176,7 @@
         </div>
     </div>
 
-    <script src="data/data.js"></script>
+    <script src="secret.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

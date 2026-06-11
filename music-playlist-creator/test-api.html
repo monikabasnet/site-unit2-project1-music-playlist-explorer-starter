@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #a8e6cf;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background: #6b9080;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #result {
+            white-space: pre-wrap;
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🧪 API Test</h1>
+        <button onclick="testAPI()">Test OpenRouter API</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="secret.js"></script>
+    <script>
+        async function testAPI() {
+            const result = document.getElementById('result');
+            result.textContent = '⏳ Testing...';
+
+            console.log('API_KEY exists?', typeof API_KEY !== 'undefined');
+            console.log('API_KEY value:', API_KEY ? 'Present (not shown)' : 'MISSING!');
+
+            if (!API_KEY) {
+                result.innerHTML = '<span class="error">❌ ERROR: API_KEY not found!</span>';
+                return;
+            }
+
+            try {
+                console.log('🚀 Calling API...');
+                const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`,
+                        'HTTP-Referer': window.location.href,
+                        'X-Title': 'Test'
+                    },
+                    body: JSON.stringify({
+                        model: 'google/gemma-4-26b-a4b-it:free',
+                        messages: [{
+                            role: 'user',
+                            content: 'Say "API works!" in one sentence.'
+                        }]
+                    })
+                });
+
+                console.log('Response status:', response.status);
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    console.error('Error:', errorData);
+                    result.innerHTML = `<span class="error">❌ ERROR ${response.status}\n\n${JSON.stringify(errorData, null, 2)}</span>`;
+                    return;
+                }
+
+                const data = await response.json();
+                console.log('Success!', data);
+                result.innerHTML = `<span class="success">✅ SUCCESS!\n\nAPI Response:\n${data.choices[0].message.content}</span>`;
+
+            } catch (error) {
+                console.error('Network error:', error);
+                result.innerHTML = `<span class="error">❌ NETWORK ERROR:\n${error.message}\n\nMake sure:\n1. You're using Live Server\n2. You have internet connection</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
