@@ -14,7 +14,7 @@ Estimated time spent: **10** hours spent in total
   - [X] Dynamically render playlists on the homepage using JavaScript.
     - [X] Playlists should be shown in grid view.
     - [X] Playlist images should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
-  - [ X] Fetch data from a provided JavaScript file and use it to create interactive playlist tiles.
+  - [X] Fetch data from a provided JavaScript file and use it to create interactive playlist tiles.
 
 - [X] **Playlist Components**
   - [X] Each tile should display the playlist's:
@@ -48,14 +48,14 @@ Estimated time spent: **10** hours spent in total
     - [X] If previously liked:
       - [X] The like count on the playlist tile should decrease by 1.
       - [X] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
-      - [ ] a playlist with a like count of 0
-      - [ ] a playlist with a non-zero like count
+    - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
+      - [X] a playlist with a like count of 0
+      - [X] a playlist with a non-zero like count
 
 - [X] **Shuffle Songs**
   - [X] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
   - [X] When the shuffle button is clicked, the playlist's songs should display in a different order.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
+  - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
   
 - [X] **Featured Page**
   - [X] Application includes a dedicated page that randomly selects and displays a playlist, showing the playlist’s:
@@ -68,8 +68,8 @@ Estimated time spent: **10** hours spent in total
   - [X] When the page is refreshed or reloaded, a new random playlist is displayed
     - For example, navigating to the all playlists page and then back to the featured playlist page should result in a new random playlist being displayed
     - Note that because your algorithm will not be truly random, it is possible that the same playlist will feature twice in a row. 
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
-  - [ ] Application includes a navigation bar or some other mechanism such that users can navigate to the page with all playlists from the featured page and vice versa without using the browser's back and forward buttons. 
+    - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
+  - [X] Application includes a navigation bar or some other mechanism such that users can navigate to the page with all playlists from the featured page and vice versa without using the browser's back and forward buttons. 
 
 - [X] **Planning Documentation**
   - [X] Repository includes a `planning.md` file with:
@@ -107,11 +107,11 @@ Estimated time spent: **10** hours spent in total
     - [X] Author
     - [X] Songs
   - [X] The playlist grid view and playlist detail modal should update to display any changes (see Required Features, Criterion 1 & 2).
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself:
-    - [ ] Editing all of a playlist's features (name, creator, AND songs)
-    - [ ] Editing some of a playlist's features (name, creator, OR songs) 
+  - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself:
+    - [X] Editing all of a playlist's features (name, creator, AND songs)
+    - [X] Editing some of a playlist's features (name, creator, OR songs) 
 
-- [ ] **Delete Playlists**
+- [X] **Delete Playlists**
   - [X] Add a delete button to each playlist tile within the grid view.
   - [X] When clicked, the playlist is removed from the playlist grid view.
 
@@ -146,21 +146,20 @@ Estimated time spent: **10** hours spent in total
 
 `TODO://` Paste the **shareable link** to your animated app walkthrough below (replace `ADD_LOOM_LINK_HERE`). GitHub markdown won't render an embedded Loom player, so a plain link is what graders will use. Make sure the link is public and playable before submitting. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website. (🚫 Remove this paragraph after adding your walkthrough link.)
 
-**Walkthrough video:** [Music Playlist Explorer Walkthrough](ADD_LOOM_LINK_HERE)
+**Walkthrough video:** [Music Playlist Explorer Walkthrough](https://www.loom.com/share/14ce4fb303bf4038a64965986d4a83c0)
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes, AI API helped a lot. Also API was hard to implement.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-Add your response here
+Work on search feature
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+It went well, I would like to add actual songs as my peers.
 
 ### Open-source libraries used
 
@@ -169,3 +168,4 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Ardelia, Devarsh, Greg, Paulo
